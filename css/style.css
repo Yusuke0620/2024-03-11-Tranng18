@@ -1,0 +1,99 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Heebo", sans-serif;
+  letter-spacing: 0.2em;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* /ここまで共通設定 */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  margin: 100px 0 200px;
+}
+.container .text {
+  z-index: 10;
+  position: absolute;
+  text-align: left;
+  padding: 65px 0 0 55px;
+}
+.container .text h1 {
+  font-size: 4.375rem;
+  font-weight: 700;
+  line-height: 70px;
+}
+.container .text h2 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+.container .text p {
+  margin-top: 60px;
+}
+.container .text p .phrase {
+  display: block;
+  font-size: 0.875rem;
+}
+.container .img {
+  width: 100%;
+  text-align: right;
+}
+.container .img .bgImg {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+  height: 500px;
+  width: 66%;
+  object-fit: cover;
+}
+
+/* レスポンシブ・ブレークポイント900px
+------------------------------- */
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    margin: 100px 0;
+  }
+  .container .text {
+    position: static;
+    width: 100%;
+    padding: 0 10px 20px;
+  }
+  .container .text h1 {
+    font-size: 2.25rem;
+    line-height: 36px;
+  }
+  .container .text p .phrase {
+    display: inline;
+  }
+  .container .img {
+    text-align: center;
+  }
+  .container .img .bgImg {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 100%;
+  }
+}
